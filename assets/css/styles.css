@@ -3,13 +3,13 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
-    --box-shadow: 0px 4px 8px #0e0404d3;
+    --box-shadow: 0px 2px 8px #011a5154;
 
   /*========== Colors ==========*/
-  --first-color: #ff4036e8;
+  --first-color: var(--orange2);
   --title-color: rgb(224, 220, 220);
-  --text-color: rgb(247, 244, 244);
-  --body-color: #000b14;
+  --text-color: var(--blue1);
+  --body-color: var(--blue5);
   --container-color: #000b14;
 
   /*========== Font and typography ==========*/
@@ -21,6 +21,18 @@
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
+
+/* CSS HEX */
+--blue1: #011a51ff;
+--blue2: #1957dbff;
+--blue3: #487beaff;
+--blue4: #7ea3f1ff;
+--blue5: #c8d7f9ff;
+--orange1: #b83700ff;
+--orange2: #f06c00ff;
+--orange3: #fab129ff;
+--orange4: #fbc55fff;
+--orange5: #fde9c3ff;
 }
 
 
@@ -86,7 +98,7 @@ img {
 
 .section__title {
   font-size: var(--h1-font-size);
-  color: var(--title-color);
+  color: var(--text-color);
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -108,6 +120,10 @@ img {
 
 .section__title__home {
   margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
 }
 
 .section__title__home h1 {
@@ -128,7 +144,7 @@ img {
 }
 
 .section__type__home > span {
-  color: #00afef;
+  color: var(--text-color);
   font-size: 3rem;
   font-weight: 200;
   display:grid;
@@ -158,7 +174,7 @@ img {
 
 @keyframes c{
   0%,100%{box-shadow:5px 0 0 #0000}
-  50%    {box-shadow:5px 0 0 white}
+  50%    {box-shadow:5px 0 0 var(--blue4)}
 }
 
 @keyframes m{
@@ -167,74 +183,55 @@ img {
 
 .section__contain__button__home {
   display: flex;
+  justify-content: flex-start;
+  width: fit-content;
   gap: 40px;
 }
 
-
-.section__button__home{
-  display: block;
+.section__button__home {
   position: relative;
-  padding: 0.5em 1em;
-  appearance: none;
-  border: 0;
-  background: transparent;
-  color: var(--first-color);
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  outline: none;
+  padding: .4em .8em;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
-  font-weight: 200;
-  border-radius: 0;
-  box-shadow: inset 0 0 0 1px currentcolor;
-  transition: background .2s ease;
+  outline: none;
+  font-size: 18px;
+  margin: .8em 0;
 }
-.section__button__home:hover {
-  background: rgba(100, 0, 0, .03);
+.section__button__home.type1 {
+  color: var(--orange2);
 }
-.button__horizontal, .button__vertical {
+.section__button__home.type1.type1::after, .section__button__home.type1.type1::before {
+  content: "";
+  display: block;
   position: absolute;
-  top: var(--horizontal-offset, 0);
-  right: var(--vertical-offset, 0);
-  bottom: var(--horizontal-offset, 0);
-  left: var(--vertical-offset, 0);
-  transition: transform 0.4s ease;
-  will-change: transform;
+  width: 80%;
+  height: 80%;
+  border: 1px solid;
+  transition: all 0.6s ease;
+  border-radius: 1px;
 }
-.button__horizontal::before, .button__vertical::before {
-  content: '';
-  position: absolute;
-  border: inherit;
+.section__button__home.type1.type1::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: var(--blue1);
+  border-right-color: var(--blue1);
 }
-.button__horizontal {
-  --vertical-offset: calc(10px * -1);
-  border-top: .5px solid currentcolor;
-  border-bottom: .5px solid currentcolor;
+.section__button__home.type1.type1::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: var(--blue1);
+  border-left-color: var(--blue1);
 }
-.button__horizontal::before {
-  top: calc(calc(10px * -1) - 1px);
-  bottom: calc(calc(10px * -1) - 1px);
-  left: calc(calc(10px * -1) * -1);
-  right: calc(calc(10px * -1) * -1);
+.section__button__home.type1.type1:hover:after, .section__button__home.type1.type1:hover:before {
+  width: 100%;
+  height: 100%;
 }
 
-.button__vertical {
-  --horizontal-offset: calc(10px * -1);
-  border-left: .5px solid currentcolor;
-  border-right: .5px solid currentcolor;
-}
-.button__vertical::before {
-  top: calc(calc(10px * -1) * -1);
-  bottom: calc(calc(10px * -1) * -1);
-  left: calc(calc(10px * -1) - 1px);
-  right: calc(calc(10px * -1) - 1px);
-}
-.section__button__home:hover .button__vertical {
-  transform: scaleY(0);
-}
-
-.section__button__home:hover .button__horizontal {
-  transform: scaleX(0);
-}
 
 /* .wrapper {
   position: absolute;
@@ -242,6 +239,11 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 } */
+
+.wrapper {
+  width: fit-content;
+}
+
 .wrapper svg {
   width: 50px;
   height: auto;
@@ -253,7 +255,7 @@ img {
 
 .wrapper svg polygon, .wrapper svg path {
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
-  fill: #ff4136;
+  fill: var(--first-color);
 }
 .wrapper svg .arrow {
   animation-delay: 1s;
@@ -316,7 +318,7 @@ img {
   left: 0;
   width: 100%;
   height: 14vh;
-  background-color: #000b14d8;
+  background-color: rgba(200, 215, 249, 0.74);
   z-index: var(--z-fixed);
   transition: .4s;
   display: flex;
@@ -367,6 +369,14 @@ img {
 
 .nav__icon {
   font-size: 1.5rem;
+}
+
+.nav__icon__theme {
+  font-size: 1rem;
+}
+
+.nav__icon__theme:hover {
+  color: var(--first-color);
 }
 
 /*Active link*/
