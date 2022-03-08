@@ -1,0 +1,393 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,900&display=swap');
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+    --box-shadow: 0px 4px 8px #0e0404d3;
+
+  /*========== Colors ==========*/
+  --first-color: #ff4036e8;
+  --title-color: rgb(224, 220, 220);
+  --text-color: rgb(247, 244, 244);
+  --body-color: #000b14;
+  --container-color: #000b14;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Montserrat', sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --tiny-font-size: .625rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+
+
+* {
+  scrollbar-color: var(--first-color) var(--body-color);
+  scrollbar-width: thin;
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--body-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--first-color);
+  /* border-radius: 20px; */
+  border: 100% solid var(--first-color);
+}
+
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 7rem 1rem 2rem;
+  /* box-shadow: var(--box-shadow); */
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section__height {
+  height: 100vh;
+}
+
+/*=============== SECTION HOME CLASSES ===============*/
+
+.section__home {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  row-gap: 40px;
+
+}
+
+.section__title__home {
+  margin: 0;
+}
+
+.section__title__home h1 {
+  font-weight: 300;
+  font-size: 4.4rem;
+  text-transform: capitalize;
+}
+
+.section__title__home h2 {
+  font-weight: 200;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.section__type__home {
+  display:inline-block;
+  vertical-align: bottom;
+}
+
+.section__type__home > span {
+  color: #00afef;
+  font-size: 3rem;
+  font-weight: 200;
+  display:grid;
+  overflow: hidden;
+  height:1.2em;
+}
+
+.section__type__home span span {
+  width:0%;
+  max-width:max-content;
+  overflow: hidden;
+  height:inherit;
+  word-break:break-all;
+  animation:
+    c 0.5s infinite steps(1),
+    t 2s linear infinite alternate,
+    m 16s steps(4) infinite;
+}
+.section__type__home span span:before {
+  content:" ";
+  display:inline-block;
+}
+
+@keyframes t{
+  90%,100% {width:100%}
+}
+
+@keyframes c{
+  0%,100%{box-shadow:5px 0 0 #0000}
+  50%    {box-shadow:5px 0 0 white}
+}
+
+@keyframes m{
+  100% {transform:translateY(-400%)}
+}
+
+.section__contain__button__home {
+  display: flex;
+  gap: 40px;
+}
+
+
+.section__button__home{
+  display: block;
+  position: relative;
+  padding: 0.5em 1em;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--first-color);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  outline: none;
+  cursor: pointer;
+  font-weight: 200;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 1px currentcolor;
+  transition: background .2s ease;
+}
+.section__button__home:hover {
+  background: rgba(100, 0, 0, .03);
+}
+.button__horizontal, .button__vertical {
+  position: absolute;
+  top: var(--horizontal-offset, 0);
+  right: var(--vertical-offset, 0);
+  bottom: var(--horizontal-offset, 0);
+  left: var(--vertical-offset, 0);
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+.button__horizontal::before, .button__vertical::before {
+  content: '';
+  position: absolute;
+  border: inherit;
+}
+.button__horizontal {
+  --vertical-offset: calc(10px * -1);
+  border-top: .5px solid currentcolor;
+  border-bottom: .5px solid currentcolor;
+}
+.button__horizontal::before {
+  top: calc(calc(10px * -1) - 1px);
+  bottom: calc(calc(10px * -1) - 1px);
+  left: calc(calc(10px * -1) * -1);
+  right: calc(calc(10px * -1) * -1);
+}
+
+.button__vertical {
+  --horizontal-offset: calc(10px * -1);
+  border-left: .5px solid currentcolor;
+  border-right: .5px solid currentcolor;
+}
+.button__vertical::before {
+  top: calc(calc(10px * -1) * -1);
+  bottom: calc(calc(10px * -1) * -1);
+  left: calc(calc(10px * -1) - 1px);
+  right: calc(calc(10px * -1) - 1px);
+}
+.section__button__home:hover .button__vertical {
+  transform: scaleY(0);
+}
+
+.section__button__home:hover .button__horizontal {
+  transform: scaleX(0);
+}
+
+/* .wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+.wrapper svg {
+  width: 50px;
+  height: auto;
+  margin: 0 2rem;
+  transform: rotate(300grad);
+  overflow: visible;
+  color: var(--first-color);
+}
+
+.wrapper svg polygon, .wrapper svg path {
+  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+  fill: #ff4136;
+}
+.wrapper svg .arrow {
+  animation-delay: 1s;
+  animation: arrow-anim 2s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+.wrapper svg .arrow2 {
+  animation: arrow-anim 2s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+  animation-delay: 1.5s;
+}
+.wrapper svg .arrow3 {
+  animation-delay: 2s;
+  animation: arrow-anim 2s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+.wrapper svg .arrow-fixed {
+  animation-delay: 2.5s;
+  animation: arrow-fixed-anim 2s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+
+@keyframes arrow-anim {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+ }
+  5% {
+    transform: translateX(-0.1rem);
+ }
+  100% {
+    transform: translateX(1rem);
+    opacity: 0;
+ }
+}
+@keyframes arrow-fixed-anim {
+  5% {
+    opacity: 0;
+ }
+  20% {
+    opacity: 0.4;
+ }
+  100% {
+    opacity: 1;
+ }
+}
+
+
+
+
+/*=============== END SECTION HOME CLASSES ===============*/
+
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 1200px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 14vh;
+  background-color: #000b14d8;
+  z-index: var(--z-fixed);
+  transition: .4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  width: 94%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .nav__img {
+  width: 32px;
+  border-radius: 50%;
+} */
+
+.nav__logo {
+  width: 90px;
+}
+
+.nav__list,
+.nav__link {
+  display: flex;
+  transition: all .4s;
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  /* color: var(--first-color); */
+}
+
+.nav__list {
+  justify-content: space-around;
+}
+
+.nav__name {
+  font-size: var(--tiny-font-size);
+  font-weight: 500;
+  /* display: none;*/ /* Minimalist design, hidden labels */
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+}
+
+/*Active link*/
+.active-link {
+  position: relative;
+  color: var(--first-color);
+
+}
+
+/* Minimalist design, active link */
+/* .active-link::before{
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  width: 4px;
+  height: 4px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+} */
+
+/* Change background header */
+.scroll-header {
+  box-shadow: var(--box-shadow);
+}

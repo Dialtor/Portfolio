@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/media.css">
+        <title>Responsive bottom navigation</title>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav">
+                <!-- <a href="#" class="nav__logo">Marlon</a> -->
+                <a href="#" class="nav__logo"><img src="./assets/img/Logo.png" alt=""></a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class='bx bx-home-alt nav__icon'></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class='bx bx-user nav__icon'></i>
+                                <span class="nav__name">About</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class='bx bx-book-alt nav__icon'></i>
+                                <span class="nav__name">Skills</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class='bx bx-briefcase-alt nav__icon'></i>
+                                <span class="nav__name">Portfolio</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#contactme" class="nav__link">
+                                <i class='bx bx-message-square-detail nav__icon'></i>
+                                <span class="nav__name">Contactme</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <img src="assets/img/perfil.png" alt="" class="nav__img"> -->
+            </nav>
+        </header>
+
+        <main>
+            <!--=============== HOME ===============-->
+            <section class="container section section__height section__home" id="home">
+                <div class="section__title__home">
+                    <h2>Hi! My name is</h2>
+                    <h1>Diego Presiga</h1>
+                    <span class="section__type__home">
+                    <span>
+                        <span>Frontend Developer</span>
+                        <span>Web Designer</span>
+                        <span>Student</span>
+                    </span>
+                    </span>
+                </div>
+                <div class="section__contain__button__home">
+                    <button  class="section__button__home">About Me
+                        <div class="button__horizontal"></div>
+                        <div class="button__vertical"></div>
+                    </button>
+                    <button  class="section__button__home">Download CV
+                        <div class="button__horizontal"></div>
+                        <div class="button__vertical"></div>
+                    </button>
+                </div>
+                <div class="wrapper">
+                    <svg width="10px" height="10px" viewBox="-5 18 1 30" style="fill: #ff4036e8;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                            <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                            <polygon class="arrow2" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                            <polygon class="arrow3" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                            <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                        </g>
+                    </svg>
+
+                </div>
+            </section>
+
+            <!--=============== ABOUT ===============-->
+            <section class="container section section__height" id="about">
+                <h2 class="section__title">About</h2>
+            </section>
+
+            <!--=============== SKILLS ===============-->
+            <section class="container section section__height" id="skills">
+                <h2 class="section__title">Skills</h2>
+            </section>
+
+            <!--=============== PORTFOLIO ===============-->
+            <section class="container section section__height" id="portfolio">
+                <h2 class="section__title">Portfolio</h2>
+            </section>
+
+            <!--=============== CONTACTME ===============-->
+            <section class="container section section__height" id="contactme">
+                <h2 class="section__title">Contactme</h2>
+            </section>
+        </main>
+        
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
