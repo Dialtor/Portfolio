@@ -3,19 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./assets/img/perfil.png">
         <!--=============== BOXICONS ===============-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="./assets/css/media.css">
-        <title>Responsive bottom navigation</title>
+        <title>Dialtor</title>
     </head>
     <body>
         <!--=============== HEADER ===============-->
         <header class="header" id="header">
             <nav class="nav">
                 <!-- <a href="#" class="nav__logo">Marlon</a> -->
-                <a href="#" class="nav__logo"><img src="./assets/img/Logo.png" alt=""></a>
+                <a href="#" class="nav__logo"><img src="./assets/img/Logo2.png" alt=""></a>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
@@ -26,11 +27,10 @@
                         </li>
                         <li class="nav__item">
                             <a href="#about" class="nav__link">
-                                <i class='bx bx-user nav__icon'></i>
-                                <span class="nav__name">About</span>
+                                    <i class='bx bx-user nav__icon'></i>
+                                    <span class="nav__name">About</span>
                             </a>
                         </li>
-
                         <li class="nav__item">
                             <a href="#skills" class="nav__link">
                                 <i class='bx bx-book-alt nav__icon'></i>
@@ -68,9 +68,9 @@
                     <h1>Diego Presiga</h1>
                     <span class="section__type__home">
                     <span>
-                        <span>Frontend Developer</span>
-                        <span>Web Designer</span>
-                        <span>Student</span>
+                        <span>{Frontend Developer}</span>
+                        <span>{Web Designer}</span>
+                        <span>{Student}</span>
                     </span>
                     </span>
                 </div>
@@ -91,33 +91,173 @@
                             <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
                         </g>
                     </svg>
-
                 </div>
             </section>
 
             <!--=============== ABOUT ===============-->
-            <section class="container section section__height" id="about">
+            <section class="container section  section__about" id="about">
                 <h2 class="section__title">About</h2>
+                <p class="section__sentence__about">"Never Stop Learning"</p>
+                <div>
+                    <img src="./assets/img/perfil.png" alt="ProfilePhoto">
+                <p class="section__info__bout">Hello, my name is Diego, I am 20 years old. I'm a web developer from Colombia, but I love doing Frontend 💻❤.
+
+                    I am also a student every day and I focus on never stop learning.</p>
+                </div>
             </section>
 
+
             <!--=============== SKILLS ===============-->
-            <section class="container section section__height" id="skills">
-                <h2 class="section__title">Skills</h2>
+            <section class="container section" id="skills">
+                <h3 class="section__title">Skills</h3>
+                <div class="flex-section-skills">
+                    <div class="section-skills-contain">
+                        <h2>Frontend</h2>
+                        <div class="flex-info-skills">
+                          <div class="name-skill-contain">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Bootstrap</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                          </div>
+                          <div class="porcent-skill-contain">
+                            <div><div></div></div>
+                            <div><div></div></div>
+                            <div><div></div></div>
+                            <div><div></div></div>
+                            <div><div></div></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="section-skills2-contain">
+                        <h2>UI/UX react</h2>
+                        <div class="flex-info-skills">
+                          <div class="name-skill-contain">
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                            <li>Ilustrator</li>
+                          </div>
+                          <div class="porcent-skill2-contain">
+                            <div><div></div></div>
+                            <div><div></div></div>
+                            <div><div></div></div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="section__icons_tech">
+                    <div><i class='bx bxl-html5 icons-skills' style='color:#011a51' ></i></div>
+                    <div><i class='bx bxl-css3 icons-skills' style='color:#011a51' ></i></div>
+                    <div><i class='bx bxl-sass icons-skills' style='color:#011a51' ></i></div>
+                    <div><i class='bx bxl-bootstrap icons-skills' style='color:#011a51' ></i></div>
+                    <div><i class='bx bxl-javascript icons-skills' style='color:#011a51' ></i></div>
+                    <div><i class='bx bxl-react icons-skills' style='color:#011a51'></i></div>
+                    <div><i class='bx bxl-figma icons-skills' style='color:#011a51' ></i></div>
+                    <div><i class='bx bxl-adobe icons-skills' style='color:#011a51' ></i></div>
+                    <div><i class='bx bxl-git icons-skills' style='color:#011a51' ></i></div>
+                    <div><i class='bx bxl-github icons-skills' style='color:#011a51' ></i></div>
+                </div>
             </section>
 
             <!--=============== PORTFOLIO ===============-->
-            <section class="container section section__height" id="portfolio">
+            <section class="container section" id="portfolio">
                 <h2 class="section__title">Portfolio</h2>
+                <section class="gallery">
+                    <div class="container">
+                        <div class="row">
+                            <div class="gallery-filter">
+                                <span class="filter-item active" data-filter="all">all</span>
+                                <span class="filter-item" data-filter="responsive">Responsive</span>
+                                <span class="filter-item" data-filter="react">React</span>
+                                <span class="filter-item" data-filter="fullstack">FullStack</span>
+                                <span class="filter-item" data-filter="wordpress">Wordpress</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- gallery item start -->
+                            <div class="gallery-item responsive">
+                                <div class="gallery-item-inner">
+                                    <div>
+                                        <img src="https://i.ibb.co/4JrCW58/Screenshot-45.png" alt="project">
+                                        <h4>Eddie Landing Page</h4>
+                                        <div>
+                                            <p>In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io</p>
+                                        </div>
+                                        <div class="live-demo-portfolio">
+                                            <a href="https://github.com/Dialtor/EdieHomepage" target="_blank"><i class='bx bx-code-alt' style='color:#011a51'></i></a>
+                                            <a href="https://dialtor.github.io/EdieHomepage/" target="_blank"><i class='bx bx-link-external' style='color:#011a51'></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- gallery item end -->
+                            <div class="gallery-item wordpress">
+                                <div class="gallery-item-inner">
+                                    <img src="https://i.ibb.co/Jdh3Svy/Screenshot-46.png" alt="project">
+                                    <h4>Kleding Chloe's E-commerce</h4>
+                                    <div>
+                                        <p>In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io</p>
+                                    </div>
+                                    <div>
+                                        <a href="https://www.kledingchloes.com" target="_blank"><i class='bx bx-link-external' style='color:#011a51'></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item responsive">
+                                <div class="gallery-item-inner">
+                                    <img src="https://i.ibb.co/fD07jQ8/Screenshot-44.png" alt="project">
+                                    <h4>Dev-challenges-io Portfolio</h4>
+                                    <div>
+                                        <p>In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io</p>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/Dialtor/PortafolioDevChallenges" target="_blank"><i class='bx bx-code-alt' style='color:#011a51'></i></a>
+                                        <a href="https://dialtor.github.io/PortafolioDevChallenges/" target="_blank"><i class='bx bx-link-external' style='color:#011a51'></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </section>
 
             <!--=============== CONTACTME ===============-->
-            <section class="container section section__height" id="contactme">
-                <h2 class="section__title">Contactme</h2>
+            <section class="container section" id="contactme">
+                <h2 class="section__title">Contact</h2>
+                <div class="contact-content">
+                    <form id="form" action="" class="form">
+                        <div>
+                            <label for="name">Name <span>*</span></label>
+                            <input name="name" required type="text" id="name" placeholder="Your Name">
+                            <label for="email">Email Address <span>*</span></label>
+                            <input name="email" type="text" id="email" required placeholder="example@gmail.com">
+                        </div>
+                        <div>
+                            <label for="message">Mensaje <span>*</span> </label>
+                            <textarea id="message" name="message" id="" cols="30" rows="10" type="text" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn primary full">Send</button>
+                        </div>
+                    </form>
+                    <a href="mailto:dialtordev@gmail.com" id="trucazo"></a>
+                </div>
             </section>
+            <footer>
+                <div><span>© Site built with ❤ by Dialtor 2022</span></div>
+                <div>
+                    <a href="https://twitter.com/DialtorDev" target="_blank"><i class='bx bxl-twitter' style='color:#011a51' ></i></a>
+                    <a href="https://twitter.com/DialtorDev" target="_blank"><i class='bx bxl-github' style='color:#011a51' ></i></a>
+                    <a href="https://twitter.com/DialtorDev" target="_blank"><i class='bx bxl-linkedin-square' style='color:#011a51' ></i></a>
+                </div>
+            </footer>
         </main>
-        
 
         <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="./assets/js/emailsend.js"></script>
     </body>
 </html>

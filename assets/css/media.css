@@ -2,7 +2,39 @@
 /* For small devices */
 /* Remove if you choose, the minimalist design */
 
+:root {
+  --header-height: 3rem;
+    --box-shadow: 0px 2px 8px #011a5154;
 
+  /*========== Colors ==========*/
+  --first-color: var(--orange2);
+  --title-color: rgb(224, 220, 220);
+  --text-color: var(--blue1);
+  --body-color: var(--blue5);
+  --container-color: #000b14;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Montserrat', sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --tiny-font-size: .625rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+/* CSS HEX */
+--blue1: #011a51ff;
+--blue2: #1957dbff;
+--blue3: #487beaff;
+--blue4: #7ea3f1ff;
+--blue5: #c8d7f9ff;
+--orange1: #b83700ff;
+--orange2: #f06c00ff;
+--orange3: #fab129ff;
+--orange4: #fbc55fff;
+--orange5: #fde9c3ff;
+}
   
   
   @media screen and (max-width: 320px) {
@@ -17,6 +49,7 @@
       justify-content: center;
       column-gap: 3rem;
     }
+
   }
   
   @media screen and (min-width: 767px) {
@@ -42,7 +75,7 @@
       /* display: block; */ /* Minimalist design, visible labels */
     }
     .nav__link:hover {
-      color: var(--first-color);
+      /* color: var(--first-color); */
     }
   
     .nav__link {
@@ -51,7 +84,7 @@
   
     .active-link {
       position: relative;
-      color: var(--first-color);
+      
     
     }
   
@@ -64,12 +97,13 @@
       height: 4px;
       background-color: var(--first-color);
       border-radius: 50%;
+      
     }
   
     /* Minimalist design */
-    /* .active-link::before{
+    .active-link::before{
         bottom: -.75rem;
-    } */
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -77,25 +111,34 @@
       position: fixed;
       bottom: 0;
       left: 0;
-      background-color: rgba(230, 225, 225, 0.788);
-      box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+      background-color: var(--blue5);
+      box-shadow: var(--box-shadow);
       width: 100%;
       height: 4rem;
       padding: 0 1rem;
       display: grid;
       align-content: center;
-      border-radius: 1.25rem 1.25rem 0 0;
+      /* border-radius: 1.25rem 1.25rem 0 0; */
       transition: all .4s;
     }
-  
+
+    .active-link {
+      position: relative;
+    
+    }
+
     .nav__link {
-      color: var(--container-color);
+      color: var(--blue1);
     }
 
     .nav {
         transition: .4s;
         display: flex;
         justify-content: center;
+      }
+
+      .icons-skills{
+        font-size: 8vw;
       }
   }
 
@@ -115,4 +158,13 @@
       margin-right: auto;
     }
   }
-  
+
+@media (max-width:640px) {
+  .icons-skills{
+    font-size: 10vw;
+  }
+
+  .flex-section-skills {
+    flex-direction: column;
+  }
+}
