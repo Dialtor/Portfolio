@@ -628,9 +628,10 @@ justify-content: flex-start;
 
 /*=============== SECTION PORTFOLIO CLASSES ===============*/
 
+
 .row{
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 img{
 	max-width: 100%;
@@ -672,11 +673,11 @@ img{
 }
 .gallery .gallery-item{
 	width: calc(100% / 3);
-	padding: 15px;
+	padding: 8px;
 }
 
 .gallery-item-inner {
-  height: 60vh;
+  height: auto;
   /* cursor: pointer; */
   padding: 6px;
   border: 1px solid var(--blue2);
@@ -764,14 +765,12 @@ img{
 /*=============== SECTION CONTACT CLASSES ===============*/
 
 .contact-content {
-  padding: 10px;
   display: flex;
   justify-content: center;
 }
 
 .contact-content form {
-  border: .5px solid var(--blue4);
-  border-radius: 12px;
+  /* border: .5px solid var(--blue4); */
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -784,8 +783,17 @@ form input {
   padding-left: 10px;
   background: none;
   border: .5px solid var(--blue1);
+  color: var(--blue1);
+  border-radius: 12px;
   margin-top: 8px;
   font-family: 'Montserrat';
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+form input::placeholder {
+  font-family: 'Montserrat';
+  font-size: 1rem;
 }
 
 form label {
@@ -794,6 +802,11 @@ form label {
 
 form input:active {
   outline-color: var(--blue1);
+  opacity: 1;
+}
+
+form input:focus {
+  border: .5px solid var(--orange1);
 }
 
 form div {
@@ -806,12 +819,23 @@ form textarea {
   width: 50vw;
   background: none;
   border: .5px solid var(--blue1);
+  color: var(--blue1);
   outline: none;
   padding: 10px;
-  overflow: scroll;
   resize: none;
   margin-top: 8px;
   font-family: 'Montserrat';
+  border-radius: 12px;
+  transition: 0.2s all ease;
+}
+
+form textarea::placeholder {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+}
+
+form textarea:focus {
+  border: .5px solid var(--orange1);
 }
 
 form button {
@@ -822,7 +846,14 @@ form button {
   cursor: pointer;
   font-size: "Montserrat";
   text-transform: uppercase;
+  border-radius: 12px;
+  margin-top: 10px;
   /* margin: 0 auto; */
+  transition: all 0.2s ease;
+}
+
+form button:hover {
+  border: .5px solid var(--orange2);
 }
 
 /*=============== END SECTION CONTACT CLASSES ===============*/

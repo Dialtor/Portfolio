@@ -167,4 +167,21 @@
   .flex-section-skills {
     flex-direction: column;
   }
+
+  .section__info__bout {
+    width: 80vw;
+  }
+
+ form input {
+   width: inherit;
+ }
+
+ form textarea {
+   width: inherit;
+ }
+
+ form button {
+   width: 50vw;
+ }
 }
+
