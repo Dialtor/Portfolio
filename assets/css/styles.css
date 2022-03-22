@@ -208,7 +208,6 @@ img {
   height: 4px;
   background-color: var(--first-color);
   border-radius: 50%;
-  
 }
 
 /* Change background header */
@@ -771,6 +770,7 @@ img{
 
 .contact-content form {
   /* border: .5px solid var(--blue4); */
+  min-width: 300px;
   padding: 10px;
   display: flex;
   flex-direction: column;
