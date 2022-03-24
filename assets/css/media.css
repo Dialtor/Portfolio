@@ -198,3 +198,9 @@
  }
 }
 
+@media (max-width:840px) {
+  .section__home {
+    height: auto;
+  }
+}
+
