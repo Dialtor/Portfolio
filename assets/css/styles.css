@@ -840,12 +840,24 @@ justify-content: flex-start;
   overflow: scroll;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-	height: 580px;
+	height: auto;
 }
 
 .padd-15{
 	padding-left:15px;
 	padding-right:15px;
+}
+
+.portfolio-info .icon2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-info .icon2 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*=============== END SECTION PORTFOLIO CLASSES ===============*/
