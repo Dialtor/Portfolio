@@ -140,6 +140,22 @@
       .icons-skills{
         font-size: 8vw;
       }
+
+      .row-filter {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        overflow: scroll;
+        height: 380px;
+      }
+  }
+
+  @media  screen and (max-width: 350px) {
+    .row-filter {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      overflow: scroll;
+      height: 380px;
+    }
   }
 
 
@@ -149,8 +165,7 @@
       --normal-font-size: 1rem;
     }
   }
-  
-  
+
   /* For large devices */
   @media screen and (min-width: 1024px) {
     .container {
@@ -167,8 +182,8 @@
     }
 
     .gallery .gallery-item {
-      width: 60%;
-      min-width: 290px;
+      width: 100%;
+      min-width: 280px;
     }
   }
 
