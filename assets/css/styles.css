@@ -620,12 +620,12 @@ justify-content: flex-start;
   flex-wrap: nowrap;
   align-items: center;
   position: relative;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .section__icons_tech  div {
-  width: 8vw;
-  height: 12vh;
+  width: 30px;
+  height: 80px;
   display: flex;
   align-items: center;
   align-self: center;
@@ -635,7 +635,7 @@ justify-content: flex-start;
 }
 
 .icons-skills{
-  font-size: 5vw;
+  font-size: 5rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
