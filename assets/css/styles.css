@@ -848,13 +848,13 @@ justify-content: flex-start;
 	padding-right:15px;
 }
 
-.portfolio-info .icon2 {
+.portfolio-info .icon2, .portfolio-info .icon{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.portfolio-info .icon2 a {
+.portfolio-info .icon2 a, .portfolio-info .icon a {
   display: flex;
   justify-content: center;
   align-items: center;
